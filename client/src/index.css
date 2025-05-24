@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 11% 98%; /* #F9FAFB */
+  --foreground: 220 13% 9%; /* #111827 */
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
+  --popover: 210 11% 98%;
+  --popover-foreground: 220 13% 9%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 13% 9%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --primary: 238 75% 65%; /* #6366F1 */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 327 73% 64%; /* #EC4899 */
+  --secondary-foreground: 210 40% 98%;
+  --accent: 262 61% 69%; /* #8B5CF6 */
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 60 9% 98%;
+  --ring: 238 75% 65%;
+  --radius: 0.5rem;
+  
+  /* Custom brand colors */
+  --brand-primary: 238 75% 65%; /* #6366F1 */
+  --brand-secondary: 327 73% 64%; /* #EC4899 */
+  --brand-accent: 262 61% 69%; /* #8B5CF6 */
+  --brand-bg: 210 11% 98%; /* #F9FAFB */
+  --brand-text: 220 13% 9%; /* #111827 */
+}
+
+.dark {
+  --background: 224 71% 4%;
+  --foreground: 213 31% 91%;
+  --muted: 223 47% 11%;
+  --muted-foreground: 215 14% 65%;
+  --popover: 224 71% 4%;
+  --popover-foreground: 213 31% 91%;
+  --card: 224 71% 4%;
+  --card-foreground: 213 31% 91%;
+  --border: 216 34% 17%;
+  --input: 216 34% 17%;
+  --primary: 238 75% 65%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 327 73% 64%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 262 61% 69%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 238 75% 65%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-brand-primary {
+    color: hsl(var(--brand-primary));
+  }
+  
+  .text-brand-secondary {
+    color: hsl(var(--brand-secondary));
+  }
+  
+  .text-brand-accent {
+    color: hsl(var(--brand-accent));
+  }
+  
+  .bg-brand-primary {
+    background-color: hsl(var(--brand-primary));
+  }
+  
+  .bg-brand-secondary {
+    background-color: hsl(var(--brand-secondary));
+  }
+  
+  .bg-brand-accent {
+    background-color: hsl(var(--brand-accent));
+  }
+  
+  .border-brand-primary {
+    border-color: hsl(var(--brand-primary));
+  }
+  
+  .gradient-brand {
+    background: linear-gradient(135deg, hsl(var(--brand-primary)), hsl(var(--brand-accent)));
+  }
+  
+  .gradient-brand-alt {
+    background: linear-gradient(135deg, hsl(var(--brand-primary)), hsl(var(--brand-secondary)));
+  }
+}
